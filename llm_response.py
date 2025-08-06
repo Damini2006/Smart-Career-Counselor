@@ -1,6 +1,6 @@
 import google.generativeai as genai
 
-genai.configure(api_key="AIzaSyDwenD_N4-FX6DA-eDufGsTBT-4XT3ujdE")
+genai.configure(api_key="")
 
 def get_motivation_feedback(name, career, skills):
     prompt = f"""
@@ -18,3 +18,4 @@ def get_motivation_feedback(name, career, skills):
     except Exception as e:
         print("Gemini API Error:", e)
         return "You're on the right track! Keep learning and growing."
+
