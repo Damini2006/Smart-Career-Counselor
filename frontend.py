@@ -5,7 +5,7 @@ import google.generativeai as genai
 from resources import get_video_link
 
 
-genai.configure(api_key="AIzaSyDwenD_N4-FX6DA-eDufGsTBT-4XT3ujdE")
+genai.configure(api_key="ur api key")
 chat_model = genai.GenerativeModel(model_name="gemini-2.0-flash")
 chat_session = chat_model.start_chat(history=[])
 st.set_page_config(page_title="🎓 Smart Career Counselor", layout="wide")
@@ -157,4 +157,5 @@ with tabs[4]:
             with st.spinner("Thinking..."):
                 response = chat_session.send_message(user_query)
                 st.success("🤖 CareerBot says:")
+
                 st.write(response.text)
